@@ -7,15 +7,9 @@ cask "vocabfloat" do
   desc "Minimalist macOS translation and dictionary tool"
   homepage "https://github.com/TheColaBro/VocabFloat-macOS"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "VocabFloat.app"
-
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/VocabFloat.app"],
-                   sudo: false
-  end
 
   zap trash: [
     "~/Library/Application Support/VocabFloat",
