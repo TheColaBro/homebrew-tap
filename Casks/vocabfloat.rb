@@ -1,6 +1,6 @@
 cask "vocabfloat" do
   version "1.0.0"
-  sha256 "45b666a2887c845988904b0bb28369f304944db1265858abfa4f30ae7ac86e6c"
+  sha256 "67600fce11ab869b6094e3b0d6f4895a9a144301564bcab0886cb7fee2394075"
 
   url "https://github.com/TheColaBro/VocabFloat-macOS/releases/download/v#{version}/VocabFloat.zip"
   name "VocabFloat"
@@ -10,6 +10,12 @@ cask "vocabfloat" do
   depends_on macos: ">= :sequoia"
 
   app "VocabFloat.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/VocabFloat.app"],
+                   sudo: false
+  end
 
   zap trash: [
     "~/Library/Application Support/VocabFloat",
