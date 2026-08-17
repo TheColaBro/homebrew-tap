@@ -1,6 +1,6 @@
 cask "vocabfloat" do
   version "1.0.0"
-  sha256 "607531c8cafc396464719e4908c009d61841ba6f15fe34797f9746c513a19c57"
+  sha256 "37679ac785ef5e86a201583a85eba960f0ae745a52bb92dfed5dca01ab1dbbdb"
 
   url "https://github.com/TheColaBro/vocabfloat/releases/download/v#{version}/VocabFloat.zip"
   name "VocabFloat"
