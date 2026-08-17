@@ -7,7 +7,7 @@ cask "vocabfloat" do
   desc "Minimalist macOS companion for global vocabulary lookup and PDF highlight extraction"
   homepage "https://github.com/TheColaBro/vocabfloat"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "VocabFloat.app"
 
